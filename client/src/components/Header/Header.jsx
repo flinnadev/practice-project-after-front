@@ -6,6 +6,7 @@ import CONSTANTS from '../../constants';
 import { clearUserStore } from '../../store/slices/userSlice';
 import { getUser } from '../../store/slices/userSlice';
 import withRouter from '../../hocs/withRouter';
+import Logo from '../Logo';
 
 class Header extends React.Component {
   componentDidMount() {
@@ -117,14 +118,11 @@ class Header extends React.Component {
           </div>
         </div>
         <div className={styles.navContainer}>
-          <Logo alt="blue_logo" className={styles.logo} />
-          <Link to="/">
-            <img
-              src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`}
-              className={styles.logo}
-              alt="blue_logo"
-            />
-          </Link>
+          <img
+            src={`${CONSTANTS.STATIC_IMAGES_PATH}blue-logo.png`}
+            className={styles.logo}
+            alt="blue_logo"
+          />
           <div className={styles.leftNav}>
             <div className={styles.nav}>
               <ul>
